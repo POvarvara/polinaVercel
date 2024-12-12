@@ -2,7 +2,7 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
     event.preventDefault();
 
     const botToken = "8045325196:AAECxgcshH5WSqMS45xxuxL-bUzmt1Tql8w"; // Укажите токен вашего бота
-    const chatId = "806496812"; // Укажите ваш Chat ID
+    const chatId = "678464658"; // Укажите ваш Chat ID
 
     const formData = new FormData();
     formData.append('chat_id', chatId);
