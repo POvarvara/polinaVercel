@@ -1,30 +1,46 @@
-(function ($) {
-    $("#contactForm").submit(function (event) {
-        event.preventDefault();
+document.getElementById('contactForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-        let message = $(this).find(".contact-form__message");
-        let form = $("#contactForm")[0];
-        let fd = new FormData(form);
+    const botToken = "8045325196:AAECxgcshH5WSqMS45xxuxL-bUzmt1Tql8w"; // Укажите токен вашего бота
+    const chatId = "678464658"; // Укажите ваш Chat ID
 
-        $.ajax({
-            url: "/php/send-message.php", // путь к PHP-обработчику
-            type: "POST",
-            data: fd,
-            processData: false,
-            contentType: false,
-            beforeSend: () => {
-                message.text("Отправка...").css("color", "blue");
-            },
-            success: function (res) {
-                if (res.status === "SUCCESS") {
-                    message.text(res.message).css("color", "green");
-                } else {
-                    message.text(res.message).css("color", "red");
-                }
-            },
-            error: function () {
-                message.text("Ошибка сервера. Попробуйте позже.").css("color", "red");
-            },
+    const formData = new FormData();
+    formData.append('chat_id', chatId);
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    const file = document.getElementById('file').files[0];
+
+    const text = `Имя: ${name}\nТелефон: ${phone}\nСообщение: ${message}`;
+    formData.append('caption', text);
+
+    if (file) {
+        formData.append('document', file);
+    } else {
+        formData.append('text', text);
+    }
+
+    const url = file
+        ? `https://api.telegram.org/bot${botToken}/sendDocument`
+        : `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    const notification = document.getElementById('notification');
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            body: formData,
         });
-    });
-})(jQuery);
+
+        if (response.ok) {
+            showNotification('Сообщение успешно отправлено!', 'success');
+            document.getElementById('telegramForm').reset();
+        } else {
+            showNotification('Ошибка отправки сообщения.', 'error');
+        }
+    } catch (error) {
+        console.error('Ошибка:', error);
+        showNotification('Ошибка при отправке.', 'error');
+    }
+});
