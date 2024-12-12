@@ -2,7 +2,7 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
     event.preventDefault();
 
     const botToken = "8045325196:AAECxgcshH5WSqMS45xxuxL-bUzmt1Tql8w"; // Укажите токен вашего бота
-    const chatId = "678464658"; // Укажите ваш Chat ID
+    const chatId = "806496812"; // Укажите ваш Chat ID
 
     const formData = new FormData();
     formData.append('chat_id', chatId);
@@ -35,7 +35,7 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
 
         if (response.ok) {
             showNotification('Сообщение успешно отправлено!', 'success');
-            document.getElementById('telegramForm').reset();
+            document.getElementById('contactForm').reset();
         } else {
             showNotification('Ошибка отправки сообщения.', 'error');
         }
