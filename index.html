@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="/style/style.css" />
+</head>
+
+<body>
+	<section class="top">
+		<div class="container">
+			<div class="top_wrap">
+				<header>
+					<a href="index.html" class="name">POLI<br />KOLESO</a>
+					<img src="icon/logo.svg" alt="" class="logo" />
+					<label class="switch">
+						<input type="checkbox" />
+						<span class="slider"></span>
+					</label>
+				</header>
+				<div class="top_content">
+					<img src="image/main_name.png" alt="" class="main_name" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about">
+		<div class="container">
+			<img src="image/about.png" alt="" class="about_img" />
+			<div class="about_wrap">
+				<h2 class="title title_about">&nbsp;</h2>
+				<div class="about_descr">
+					Меня зовут Колесникова Полина, и я имею опыт работы в сфере
+					графического дизайна. Моя уникальная способность заключается в том,
+					что я могу превратить идеи и концепции в запоминающиеся визуальные
+					образы. Я специализируюсь на создании и разработке фирменного стиля,
+					который отражает ценности и идентичность брендов в графическом виде.
+				</div>
+				<a href="#" class="button about_button">Свзяаться со мной</a>
+
+			</div>
+			<img src="icon/logo_bg.svg" alt="" class="logo_bg" />
+		</div>
+
+		<div class="modal_window">
+			<a href="#" class="modal_close">Закрыть окно</a>
+			<form id="contactForm" class="contact-form" enctype="multipart/form-data">
+				<div class="contact-form__title">Закажите звонок</div>
+				<div class="contact-form__line-two">
+					<!-- Поле с именем -->
+					<div class="contact-form__line">
+						<input type="text" placeholder="Ваше имя" id="name" name="name" required>
+					</div>
+					<div class="contact-form__line">
+						<input type="text" placeholder="Ваш телефон" id="phone" name="phone" required>
+					</div>
+				</div>
+				<div class="contact-form__line">
+					<textarea id="message" placeholder="Ваше сообщение" name="message" required></textarea>
+				</div>
+				<div class="contact-form__line">
+					<input type="file" id="file" name="file" accept="image/*">
+				</div>
+				<button class="button" type="submit">Отправить</button>
+				<p class="contact-form__message"></p>
+			</form>
+
+
+		</div>
+	</section>
+	<section class="education">
+		<div class="container">
+			<h2 class="title">EDUCATION</h2>
+			<div class="wonderland">
+				<div class="wonderland_img_wrap">
+					<img src="image/certificate_1.png" alt="" class="wonderland_img" />
+					<img src="image/certificate_2.png" alt="" class="wonderland_img" />
+				</div>
+				<div class="wonderland_descr">
+					Выпускница школы дизайна Design Wonderland <br />
+					по программе “Графический дизайн”
+				</div>
+			</div>
+			<div class="education_wrap">
+				<img src="icon/poli_bg.svg" alt="" class="poli_bg" />
+				<div class="education_right">
+					<div class="netologiya">
+						<div class="netologiya_descr">
+							Выпускница образовательной платформы Нетология <br />
+							по программе “Графический дизайн и коммуникации”
+						</div>
+						<img src="image/netologiya.png" alt="" class="netologiya_img" />
+					</div>
+					<div class="university">
+						<img src="image/university.png" alt="" class="university_img" />
+						<div class="university_descr">
+							Действующая студентка СПБГУПТД на специальности <br />
+							“Прикладная информатика в дизайне”
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="portfolio">
+		<div class="container">
+			<h2 class="title title_left">PORTFOLIO</h2>
+			<div class="tabheader">
+				<div class="tabheader_item tabheader_item_active">
+					ФИРМЕННЫЙ СТИЛЬ
+				</div>
+				<div class="tabheader_item">ЛОГОТИП</div>
+				<div class="tabheader_item">АФИША</div>
+				<div class="tabheader_item">ГЕРБ</div>
+			</div>
+			<div class="tabcontainer">
+				<div class="tabcontent">
+					<div class="portfolio_wrap">
+						<div class="portfolio_item">
+							<img src="image/portfolio_1.png" alt="" class="portfolio_img" />
+							<div class="portfolio_descr baikal">
+								Брендбук <br />
+								Baikal Travel Tour
+							</div>
+						</div>
+						<div class="portfolio_item portfolio_item_bottom">
+							<div class="portfolio_descr vintage">
+								Фирменный стиль <br />
+								818 Vintage
+							</div>
+							<img src="image/portfolio_2.png" alt="" class="portfolio_img" />
+						</div>
+						<div class="portfolio_item">
+							<img src="image/portfolio_3.png" alt="" class="portfolio_img" />
+							<div class="portfolio_descr kover">
+								Брендбук <br />
+								KOVЁR
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tabcontent">
+					<div class="portfolio_wrap">
+						<div class="portfolio_logo">
+							<img src="image/logo_1.jpg" alt="" class="portfolio_img" />
+						</div>
+						<div class="portfolio_logo">
+							<img src="image/logo_2.jpg" alt="" class="portfolio_img" />
+						</div>
+						<div class="portfolio_logo">
+							<img src="image/logo_3.jpg" alt="" class="portfolio_img" />
+						</div>
+					</div>
+				</div>
+				<div class="tabcontent">
+					<div class="portfolio_wrap">
+						<div class="portfolio_poster">
+							<img src="image/poster_1.jpg" alt="" class="portfolio_img" />
+						</div>
+						<div class="portfolio_poster">
+							<img src="image/poster_2.jpg" alt="" class="portfolio_img" />
+						</div>
+					</div>
+				</div>
+				<div class="tabcontent">
+					<div class="portfolio_wrap">
+						<div class="portfolio_crest">
+							<img src="image/crest_1.jpg" alt="" class="portfolio_img" />
+							<div class="portfolio_descr">TSYPA</div>
+						</div>
+						<div class="portfolio_crest">
+							<img src="image/crest_2.jpg" alt="" class="portfolio_img" />
+							<div class="portfolio_descr">YANDEX x BLOOM</div>
+						</div>
+						<div class="portfolio_crest">
+							<img src="image/crest_3.jpg" alt="" class="portfolio_img" />
+							<div class="portfolio_descr">OLD FRIEND</div>
+						</div>
+						<div class="portfolio_crest">
+							<img src="image/crest_4.jpg" alt="" class="portfolio_img" />
+							<div class="portfolio_descr">MONSERRATE</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="footer_title">КОНТАКТЫ</div>
+			<a href="mailto:kolesnikova_koleso@mail.ru" class="footer_item">Почта: kolesnikova_koleso@mail.ru</a>
+			<a href="#" class="footer_item">Инстаграм: poli_koleso</a>
+			<a href="#" class="footer_item">Behance: poli_koleso</a>
+			<a href="#" class="footer_item">Pinterest: poli_koleso</a>
+		</div>
+	</footer>
+
+	<script src="js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/tgform.js"></script>
+</body>
+
+</html>
